@@ -1,0 +1,19 @@
+const cap = str => str.charAt(0).toUpperCase() + str.slice(1)
+
+const copyToClipboard = (text) => navigator.clipboard.writeText(text)
+
+const isEven = num => num % 2 === 0
+
+const reverseString = str => str.split('').reverse().join('')
+
+const uniqueValuesInArray = (arr) => [...new Set(arr)]
+
+const averageOf = (...nums) => nums.reduce((a, b) => a + b) / nums.length
+
+const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+
+const randomHexColor = () => `#{Math.random().toString(16).slice(2,8).padEnd(6,'0')}`
+
+const arrayIsNotEmpty = arr => Array.isArray(arr) && arr.length > 0
+
+const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random())
